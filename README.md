@@ -25,16 +25,21 @@ To demonstrate the entire pipeline from multiple labelled spike trains, a cch_st
 - calc_stg.m 			
   - computes STGs from crCCHs
 
-## Data
-simData.mat			spike trains simulated over 6 hours
-eight pairs, with strong/weak excitatory/inhibitory connections, with/without bursts
-CA1_Data.mat 	spike trains of 6 units, recorded from CA1 of a freely-moving mouse over ~5 hours. 
-Units 1-4 are putative PYR, units 5 and 6 are are putative INT
+### Data
+- simData.mat
+  - spike trains simulated over 6 hours eight pairs, with strong/weak excitatory/inhibitory connections, with/without bursts
+- CA1_Data.mat 	
+  - spike trains of 6 units, recorded from CA1 of a freely-moving mouse over ~5 hours. Units 1-4 are putative PYR, units 5 and 6 are are putative INT
 
-External dependencies (FMAToolbox)
-CCG.m; CCGEngine.c (requires compilation); isastring.m; isdscalar.m; isdvector.m; Smooth.m
+### External dependencies (FMAToolbox)
+- [CCG.m](https://github.com/michael-zugaro/FMAToolbox/blob/master/Analyses/CCG.m)
+- [CCGEngine.c (requires compilation)](https://github.com/michael-zugaro/FMAToolbox/blob/master/Analyses/private/CCGEngine.c)
+- [isastring.m](https://github.com/michael-zugaro/FMAToolbox/blob/master/Helpers/isastring.m)
+- [isdscalar.m](https://github.com/michael-zugaro/FMAToolbox/blob/master/Helpers/isdscalar.m)
+- [isdvector.m](https://github.com/michael-zugaro/FMAToolbox/blob/master/Helpers/isdvector.m)
+- [Smooth.m](https://github.com/michael-zugaro/FMAToolbox/blob/master/General/Smooth.m)
 
-To run the demo
+### To run the demo
 Download all routines, data, and external dependencies
 Write cch_stg_demo.m, should produce the following two figures
 
