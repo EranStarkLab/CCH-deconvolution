@@ -27,9 +27,11 @@ To demonstrate the entire pipeline from multiple labelled spike trains, a cch_st
 
 ### Data
 - simData.mat
-  - spike trains simulated over 6 hours eight pairs, with strong/weak excitatory/inhibitory connections, with/without bursts
+  - Spike trains simulated over 6 hours 
+  - Eight pairs, with strong/weak excitatory/inhibitory connections, with/without bursts
 - CA1_Data.mat 	
-  - spike trains of 6 units, recorded from CA1 of a freely-moving mouse over ~5 hours. Units 1-4 are putative PYR, units 5 and 6 are are putative INT
+  - Spike trains of 6 units, recorded from CA1 of a freely-moving mouse over ~5 hours
+  - Units 1-4 are putative PYR, units 5 and 6 are are putative INT
 
 ### External dependencies (FMAToolbox)
 - [CCG.m](https://github.com/michael-zugaro/FMAToolbox/blob/master/Analyses/CCG.m)
@@ -40,12 +42,14 @@ To demonstrate the entire pipeline from multiple labelled spike trains, a cch_st
 - [Smooth.m](https://github.com/michael-zugaro/FMAToolbox/blob/master/General/Smooth.m)
 
 ### To run the demo
-Download all routines, data, and external dependencies
-Write cch_stg_demo.m, should produce the following two figures
+- Download all routines, data, and external dependencies
+- In MATLAB, write cch_stg_demo.m
 
-### Simulation
+## Demo results
+
+### Simulated spike trains
 ![simulation](fig1_simulation.png)
-### CA1
+### Real spikes trains from mouse CA1
 ![CA1](fig2.CA1.png)
 
 
