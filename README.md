@@ -1,8 +1,8 @@
 # CCH-deconvolution
-Deconvolution algorithm for removing burst spiking artifacts from CCH
+Deconvolution algorithm for removing effects of second order spike train statistics from CCH 
 
 ## Overview
-The core CCH deconvolution algorithm described by Spivak et al. is implemented by the MATLAB routine cchdeconv.m
+The CCH deconvolution algorithm described by Spivak et al. was designed to remove burst spiking artifacts from cross-correlation histograms (CCHs). The core algorithm is implemented by the MATLAB routine cchdeconv.m
 
 To estimate spike transmission (quantification and detection) between two spike trains, use the routine cch_stg.m. This routine takes as inputs a CCH (or CCHs), ACHs, and the number of spikes in each corresponding spike train.
 
