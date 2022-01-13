@@ -2,14 +2,14 @@
 Deconvolution algorithm for removing burst spiking artifacts from CCH
 CCH deconvolution
 
-Overview
+## Overview
 The core CCH deconvolution algorithm described by Spivak et al. is implemented by the MATLAB routine cchdeconv.m
 
 To estimate spike transmission (quantification and detection) between two spike trains, use the routine cch_stg.m. This routine takes as inputs a CCH (or CCHs), ACHs, and the number of spikes in each corresponding spike train.
 
 To compute CCHs and ACHs from spike trains, you must use an external routine (not part of this directory). One option is CCG.m, available from FMAToolbox. 
 
-Demo
+## Demo
 To demonstrate the entire pipeline from multiple labelled spike trains, a cch_stg_demo.m is available. To run the demo, you will need the following:
 
 Routines (CCH deconvolution)
