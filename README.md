@@ -38,7 +38,7 @@ To run the demo
 Download all routines, data, and external dependencies
 Write cch_stg_demo.m, should produce the following two figures
 
-![simulation](https://drive.google.com/file/d/1BUVC-xv4UVRmRtxJ1G1x8gEh2BH3328o/view?usp=sharing)
+![simulation](file:///home/lidor/data/ASG_project/STQ_paper_V2/code_for_publish/2022_01_13_files_for_upload_v1/2022_01_13_files_for_upload_v1/fig1.png)
 
 
 
