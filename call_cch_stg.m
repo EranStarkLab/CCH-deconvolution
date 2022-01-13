@@ -74,7 +74,7 @@ end
 %-------------------------------------------------------------------------------
 
 % compute all CCGs
-[ cc, cchbins ]                	= CCG( spkT./spkFS, spkL, 'binSize', binSize, 'duration', halfSize, 'norm', 'counts');
+[ cc, cchbins ]                	= CCG( spkT./spkFS, spkL, 'binSize', binSize, 'duration', halfSize );
 
 % compute Nspikes for each unit
 Gsub                            = unique( spkL );

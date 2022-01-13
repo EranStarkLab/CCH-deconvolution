@@ -1,8 +1,9 @@
-% ccg_stg_demo                  load example simulated and real data and plot CCHs and dcCCHs
+% cch_stg_demo                  load example simulated and real data and plot CCHs and dcCCHs
 %
 % requires:
-% datasets (simData.mat, CA1_Data.mat)
-% routines (call_cch_stg, CCG, cch_conv, calc_stg)
+% routines                      call_cch_stg, cch_stg, cchdeconv, cch_conv, calc_stg
+% datasets                      simData.mat, CA1_Data.mat
+% external sources              CCG (and dependencies; see FMAToolbox)
 %
 % 13-jan-22 LS
 
@@ -47,7 +48,7 @@ rSTG                            = simData( 1 ).rSTG;
 [ eSTG1, ~, ~, ~, dcCCH, ~, cchbins ] = call_cch_stg( spkT, spkL, spkFS, binSize, halfSize, W );
 
 % 1.1.2. compute CCG
-cc                              = CCG( spkT ./ spkFS, spkL, 'binSize', binSize, 'duration', halfSize, 'norm', 'counts' );
+cc                              = CCG( spkT ./ spkFS, spkL, 'binSize', binSize, 'duration', halfSize );
 Gsub                            = unique( spkL );
 cc                              = cc( :, Gsub, Gsub );
 bs                              = length( Gsub ) - 1;
@@ -94,7 +95,7 @@ rSTG                            = simData( 2 ).rSTG;
 [ eSTG1, ~, ~, ~, dcCCH, ~, cchbins ] = call_cch_stg( spkT, spkL, spkFS, binSize, halfSize, W );
 
 % 1.2.2. compute CCG
-cc                              = CCG( spkT ./ spkFS, spkL, 'binSize', binSize, 'duration', halfSize, 'norm', 'counts' );
+cc                              = CCG( spkT ./ spkFS, spkL, 'binSize', binSize, 'duration', halfSize );
 Gsub                            = unique( spkL );
 cc                              = cc( :, Gsub, Gsub );
 bs                              = length( Gsub ) - 1;
@@ -142,7 +143,7 @@ spkFS                           = CA1_Data( 1 ).spkFs;
 [ eSTG1, ~, ~, ~, dcCCH, ~, cchbins ] = call_cch_stg( spkT, spkL, spkFS, binSize, halfSize, W );
 
 % 2.2. compute CCGs for all pairs
-cc                              = CCG( spkT ./ spkFS, spkL, 'binSize', binSize, 'duration', halfSize, 'norm', 'counts' );
+cc                              = CCG( spkT ./ spkFS, spkL, 'binSize', binSize, 'duration', halfSize );
 Gsub                            = unique( spkL );
 cc                              = cc( :, Gsub, Gsub );
 bs                              = length( Gsub ) - 1;
@@ -150,8 +151,8 @@ bs                              = length( Gsub ) - 1;
 % 2.3. compute and plot eSTGs from CCHs for selected pairs
 %-------------------------------------------------------------------------------------
 % 2.3.1. compute eSTGs from CCHs for a selected pair
-u1                              = 3;
-u2                              = 5;
+u1                              = 4;
+u2                              = 6;
 
 nspks1                          = sum( spkL == Gsub( u1 ) );
 dt                              = diff( cchbins( 1 : 2 ) );                 % [s]
@@ -181,8 +182,8 @@ plot_CCH( cchbins, dcCCH( :, cidx ), Cdc, NaN, eSTG1( cidx ) )
 
 %-------------------------------------------------------------------------------------
 % 2.3.2. compute eSTGs from CCHs for a second pair
-u1                              = 2;
-u2                              = 4;
+u1                              = 3;
+u2                              = 5;
 
 nspks1                          = sum( spkL == Gsub( u1 ) );
 dt                              = diff( cchbins( 1 : 2 ) );                 % [s]
