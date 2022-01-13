@@ -38,9 +38,10 @@ To run the demo
 Download all routines, data, and external dependencies
 Write cch_stg_demo.m, should produce the following two figures
 
-![simulation](fig1.png)
-
-![CA1](fig2.png)
+### Simulation
+![simulation](fig1_simulation.png)
+### CA1
+![CA1](fig2.CA1.png)
 
 
 
