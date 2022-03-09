@@ -217,7 +217,6 @@ return
 function plot_CCH( cchbins, cch, ColorBar, rSTG, eSTG )                     % plots CCH as a bar graph
 
 bar( cchbins, cch, 1, 'FaceColor', ColorBar, 'EdgeColor', 'none' );
-alines( 0, 'x', 'color', [ 0 0 0], 'LineWidth', 1, 'linestyle', '--' );
 set( gca, 'box', 'off', 'tickdir', 'out' )
 xlabel( 'Time lag [s]' )
 ylabel( 'Count' )
