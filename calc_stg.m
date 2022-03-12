@@ -62,7 +62,7 @@ end
 % support of positive extremum
 switch stgMode
     case 0
-        x                       = crcch( t_ROI );
+        x                       = crcch(logical(t_ROI ));
         [ ~, maxidx ]           = max( x );
     case 1
         pidx                    = ft_ROI( [ 1 end ] ) + [ -1 1 ]';
