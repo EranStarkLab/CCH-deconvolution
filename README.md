@@ -1,5 +1,5 @@
 # CCH-deconvolution
-Deconvolution algorithm for removing effects of second order spike train statistics from CCH 
+Deconvolution algorithm for removing effects of second order spike train statistics from CCH, described in Spivak et al., 2022, Communications Biology
 
 ## Overview
 The CCH deconvolution algorithm described by Spivak et al. was designed to remove burst spiking artifacts from cross-correlation histograms (CCHs). The core algorithm is implemented by the MATLAB routine cchdeconv.m
